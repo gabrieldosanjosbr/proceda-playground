@@ -31,8 +31,7 @@ FROM base AS production
 
 COPY . /app
 
-RUN --mount=type=secret,id=composer_auth,required=true \
-    APP_ENV=prod APP_DEBUG=0 \
+RUN APP_ENV=prod APP_DEBUG=0 \
     composer install \
         --no-dev \
         --prefer-dist \
