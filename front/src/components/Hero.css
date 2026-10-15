@@ -1,0 +1,26 @@
+.feature-zap {
+    animation: electric-pulse 7s ease-in-out infinite;
+}
+
+@keyframes electric-pulse {
+    0%, 88%, 100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 0 transparent);
+    }
+
+    92% {
+        opacity: 0.92;
+        filter: drop-shadow(0 0 1px currentColor);
+    }
+
+    96% {
+        opacity: 1;
+        filter: drop-shadow(0 0 2px currentColor);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feature-zap {
+        animation: none;
+    }
+}

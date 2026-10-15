@@ -1,0 +1,42 @@
+/* Iluminação suave dos selects da Toolbar */
+
+.toolbar .select-label select {
+    transition:
+            background-color 180ms ease,
+            border-color 180ms ease,
+            box-shadow 180ms ease;
+
+    background: light-dark(#fff, #1f2937);
+
+    cursor: pointer;
+}
+
+/* Iluminação mais intensa no hover */
+
+.toolbar .select-label select:hover:not(:disabled) {
+    box-shadow:
+            0 0 0 1px rgba(120, 150, 255, 0.20),
+            0 0 12px rgba(120, 150, 255, 0.20);
+}
+
+/* Destaque quando o campo está selecionado */
+
+.toolbar .select-label select:focus-visible {
+    outline: none;
+
+    box-shadow:
+            0 0 0 2px rgba(120, 150, 255, 0.30),
+            0 0 16px rgba(120, 150, 255, 0.24);
+}
+
+/* Evita iluminação em campos desabilitados */
+
+.toolbar .select-label select:disabled {
+    box-shadow: none;
+}
+
+.toolbar .select-label select option {
+    background-color: light-dark(#ffffff, #1f2937);
+    color: light-dark(#111827, #f9fafb);
+    font-size: 14px;
+}

@@ -1,0 +1,49 @@
+services:
+    playground-api:
+        build:
+            context: .
+            target: production
+            secrets:
+                - composer_auth
+
+        working_dir: /app
+
+        environment:
+            APP_ENV: prod
+            APP_DEBUG: "0"
+            PROCEDA_WRITER_SOCKET: /run/proceda/writer.sock
+            CORS_ALLOW_ORIGIN: "${CORS_ALLOW_ORIGIN:?Defina CORS_ALLOW_ORIGIN}"
+
+        volumes:
+            - proceda-runtime:/run/proceda
+
+        restart: unless-stopped
+
+        mem_limit: 512m
+        cpus: 1.0
+        pids_limit: 128
+
+    playground-nginx:
+        image: nginx:1.28-alpine
+
+        volumes:
+            - ./public:/app/public:ro
+            - ./docker/nginx/www.conf:/etc/nginx/conf.d/default.conf:ro
+
+        depends_on:
+            - playground-api
+
+        restart: unless-stopped
+
+        mem_limit: 128m
+        cpus: 0.5
+        pids_limit: 64
+
+volumes:
+    proceda-runtime:
+        external: true
+        name: proceda-runtime
+
+secrets:
+    composer_auth:
+        file: ./.secrets/composer-auth.json

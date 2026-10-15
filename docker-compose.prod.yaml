@@ -1,0 +1,59 @@
+services:
+    playground-traefik:
+        image: traefik:v3.7
+        restart: unless-stopped
+
+        networks:
+            - proceda-proxy
+
+        command:
+            - "--providers.docker=true"
+            - "--providers.docker.exposedbydefault=false"
+            - "--entrypoints.web.address=:80"
+            - "--entrypoints.websecure.address=:443"
+            - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+            - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+            - "--certificatesresolvers.letsencrypt.acme.email=${ACME_EMAIL:?Defina seu email}"
+            - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+            - "--certificatesresolvers.letsencrypt.acme.httpchallenge=true"
+            - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web"
+
+        ports:
+            - "80:80"
+            - "443:443"
+
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock:ro
+            - traefik-certificates:/letsencrypt
+
+        mem_limit: 128m
+        pids_limit: 64
+
+    playground-nginx:
+        networks:
+            - proceda-proxy
+            - default
+
+        volumes:
+            - ./docker/nginx/www.prod.conf:/etc/nginx/conf.d/default.conf:ro
+            - ./docker/nginx/limits.conf:/etc/nginx/conf.d/00-limits.conf:ro
+
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.playground.rule=Host(`${PROCEDA_DOMAIN:?Defina o domínio}`)"
+            - "traefik.http.routers.playground.entrypoints=websecure"
+            - "traefik.http.routers.playground.tls=true"
+            - "traefik.http.routers.playground.tls.certresolver=letsencrypt"
+            - "traefik.http.routers.playground.service=playground"
+            - "traefik.http.services.playground.loadbalancer.server.port=80"
+            - "traefik.docker.network=proceda-playground_proceda-proxy"
+
+volumes:
+    traefik-certificates:
+
+
+networks:
+    proceda-proxy:
+        ipam:
+            config:
+                - subnet: 172.29.50.0/24
