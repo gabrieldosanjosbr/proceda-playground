@@ -43,7 +43,3 @@ volumes:
     proceda-runtime:
         external: true
         name: proceda-runtime
-
-secrets:
-    composer_auth:
-        file: ./.secrets/composer-auth.json
