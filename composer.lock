@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d260b91596fc0dde9f34336d7a2316a5",
+    "content-hash": "d10f36df8bcbfce80aa3fec9dde47b15",
     "packages": [
         {
             "name": "doctrine/deprecations",
@@ -116,90 +116,6 @@
                 "source": "https://github.com/FakerPHP/Faker/tree/v1.24.1"
             },
             "time": "2024-11-21T13:46:39+00:00"
-        },
-        {
-            "name": "gabrieldosanjosbr/proceda",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:gabrieldosanjosbr/proceda.git",
-                "reference": "105fbcb405271adb410d73a9516ecafb871b6066"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gabrieldosanjosbr/proceda/zipball/105fbcb405271adb410d73a9516ecafb871b6066",
-                "reference": "105fbcb405271adb410d73a9516ecafb871b6066",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.3",
-                "phpdocumentor/type-resolver": "^2.0",
-                "phpstan/phpdoc-parser": "^2.3",
-                "symfony/property-access": "^7.4",
-                "symfony/property-info": "^7.4",
-                "symfony/serializer": "^7.4",
-                "symfony/yaml": "^7.4"
-            },
-            "require-dev": {
-                "fakerphp/faker": "^1.24",
-                "friendsofphp/php-cs-fixer": "^3.95",
-                "phpmd/phpmd": "^2.15",
-                "phpstan/phpstan": "^2.2",
-                "phpunit/phpunit": "^12.2",
-                "proceda/fixtures": "@dev",
-                "symfony/console": "^7.4",
-                "symfony/var-dumper": "^7.4"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Proceda\\": [
-                        "src/",
-                        "src/Domain/"
-                    ]
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Proceda\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit --testsuite unit"
-                ],
-                "test:writer": [
-                    "phpunit --testsuite writer"
-                ],
-                "analyse": [
-                    "phpstan analyse --memory-limit=1G"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gabriel dos Anjos",
-                    "email": "gabrieldosanjos@outlook.com"
-                }
-            ],
-            "description": "Biblioteca PHP para layouts PROCEDA (NOTFIS, OCOREN, CONEMB e DOCCOB)",
-            "keywords": [
-                "edi",
-                "frete",
-                "logistica",
-                "notfis",
-                "ocoren",
-                "proceda",
-                "transporte"
-            ],
-            "support": {
-                "source": "https://github.com/gabrieldosanjosbr/proceda/tree/main",
-                "issues": "https://github.com/gabrieldosanjosbr/proceda/issues"
-            },
-            "time": "2026-10-15T16:51:36+00:00"
         },
         {
             "name": "nelmio/cors-bundle",
@@ -431,39 +347,109 @@
         },
         {
             "name": "proceda/fixtures",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:gabrieldosanjosbr/proceda-fixtures.git",
-                "reference": "aaf913e8ba8ee5108edb50afb6cad9180035b156"
+                "url": "https://github.com/gabrieldosanjosbr/proceda-fixtures.git",
+                "reference": "eb645c80e70fb9c22f923888b500596a8510bc8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gabrieldosanjosbr/proceda-fixtures/zipball/aaf913e8ba8ee5108edb50afb6cad9180035b156",
-                "reference": "aaf913e8ba8ee5108edb50afb6cad9180035b156",
+                "url": "https://api.github.com/repos/gabrieldosanjosbr/proceda-fixtures/zipball/eb645c80e70fb9c22f923888b500596a8510bc8b",
+                "reference": "eb645c80e70fb9c22f923888b500596a8510bc8b",
                 "shasum": ""
             },
             "require": {
                 "fakerphp/faker": "^1.24",
-                "gabrieldosanjosbr/proceda": "@dev",
-                "php": "^8.4"
+                "php": "^8.4",
+                "proceda/proceda": "^1.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Proceda\\Fixtures\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Fixtures and test data generators for Proceda.",
             "support": {
-                "source": "https://github.com/gabrieldosanjosbr/proceda-fixtures/tree/main",
-                "issues": "https://github.com/gabrieldosanjosbr/proceda-fixtures/issues"
+                "issues": "https://github.com/gabrieldosanjosbr/proceda-fixtures/issues",
+                "source": "https://github.com/gabrieldosanjosbr/proceda-fixtures/tree/v1.0.0"
             },
-            "time": "2026-10-15T16:31:00+00:00"
+            "time": "2026-10-15T17:57:48+00:00"
+        },
+        {
+            "name": "proceda/proceda",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gabrieldosanjosbr/proceda.git",
+                "reference": "4259379ef2f9c10b6186d5386a914b56e21a5f69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gabrieldosanjosbr/proceda/zipball/4259379ef2f9c10b6186d5386a914b56e21a5f69",
+                "reference": "4259379ef2f9c10b6186d5386a914b56e21a5f69",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.3",
+                "phpdocumentor/type-resolver": "^2.0",
+                "phpstan/phpdoc-parser": "^2.3",
+                "symfony/property-access": "^7.4",
+                "symfony/property-info": "^7.4",
+                "symfony/serializer": "^7.4",
+                "symfony/yaml": "^7.4"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.24",
+                "friendsofphp/php-cs-fixer": "^3.95",
+                "phpmd/phpmd": "^2.15",
+                "phpstan/phpstan": "^2.2",
+                "phpunit/phpunit": "^12.2",
+                "proceda/fixtures": "^1.0",
+                "symfony/console": "^7.4",
+                "symfony/var-dumper": "^7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Proceda\\": [
+                        "src/",
+                        "src/Domain/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel dos Anjos",
+                    "email": "gabrieldosanjos@outlook.com"
+                }
+            ],
+            "description": "Biblioteca PHP para layouts PROCEDA (NOTFIS, OCOREN, CONEMB e DOCCOB)",
+            "keywords": [
+                "OCOREN",
+                "PROCEDA",
+                "conemb",
+                "doccob",
+                "edi",
+                "frete",
+                "logistica",
+                "notfis",
+                "transporte"
+            ],
+            "support": {
+                "issues": "https://github.com/gabrieldosanjosbr/proceda/issues",
+                "source": "https://github.com/gabrieldosanjosbr/proceda/tree/v1.0.0"
+            },
+            "time": "2026-10-15T18:51:07+00:00"
         },
         {
             "name": "psr/cache",
@@ -3442,10 +3428,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "gabrieldosanjosbr/proceda": 20,
-        "proceda/fixtures": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
