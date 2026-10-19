@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d10f36df8bcbfce80aa3fec9dde47b15",
+    "content-hash": "950c648b97e0f49f61a8a568fd4a0f38",
     "packages": [
         {
             "name": "doctrine/deprecations",
@@ -347,16 +347,16 @@
         },
         {
             "name": "proceda/fixtures",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gabrieldosanjosbr/proceda-fixtures.git",
-                "reference": "eb645c80e70fb9c22f923888b500596a8510bc8b"
+                "reference": "01468c4e00075b1ba036db79fc949352343fe758"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gabrieldosanjosbr/proceda-fixtures/zipball/eb645c80e70fb9c22f923888b500596a8510bc8b",
-                "reference": "eb645c80e70fb9c22f923888b500596a8510bc8b",
+                "url": "https://api.github.com/repos/gabrieldosanjosbr/proceda-fixtures/zipball/01468c4e00075b1ba036db79fc949352343fe758",
+                "reference": "01468c4e00075b1ba036db79fc949352343fe758",
                 "shasum": ""
             },
             "require": {
@@ -377,22 +377,22 @@
             "description": "Fixtures and test data generators for Proceda.",
             "support": {
                 "issues": "https://github.com/gabrieldosanjosbr/proceda-fixtures/issues",
-                "source": "https://github.com/gabrieldosanjosbr/proceda-fixtures/tree/v1.0.0"
+                "source": "https://github.com/gabrieldosanjosbr/proceda-fixtures/tree/v1.0.1"
             },
-            "time": "2026-10-15T17:57:48+00:00"
+            "time": "2026-10-19T20:02:03+00:00"
         },
         {
             "name": "proceda/proceda",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gabrieldosanjosbr/proceda.git",
-                "reference": "4259379ef2f9c10b6186d5386a914b56e21a5f69"
+                "reference": "c8f2d802cf050591a7f6b6da44c2471ff8a6fe7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gabrieldosanjosbr/proceda/zipball/4259379ef2f9c10b6186d5386a914b56e21a5f69",
-                "reference": "4259379ef2f9c10b6186d5386a914b56e21a5f69",
+                "url": "https://api.github.com/repos/gabrieldosanjosbr/proceda/zipball/c8f2d802cf050591a7f6b6da44c2471ff8a6fe7c",
+                "reference": "c8f2d802cf050591a7f6b6da44c2471ff8a6fe7c",
                 "shasum": ""
             },
             "require": {
@@ -447,9 +447,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gabrieldosanjosbr/proceda/issues",
-                "source": "https://github.com/gabrieldosanjosbr/proceda/tree/v1.0.0"
+                "source": "https://github.com/gabrieldosanjosbr/proceda/tree/v1.0.1"
             },
-            "time": "2026-10-15T18:51:07+00:00"
+            "time": "2026-10-19T20:05:09+00:00"
         },
         {
             "name": "psr/cache",
