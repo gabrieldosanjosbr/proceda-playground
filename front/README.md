@@ -1,6 +1,6 @@
 # PROCEDA Playground
 
-React + Vite + TypeScript, Tailwind CSS e CodeMirror. Recriação da referência com componentes legíveis e separados. Só inclui os componentes usados na página.
+React + Vite + TypeScript, Tailwind CSS e CodeMirror.
 
 ## Docker
 
