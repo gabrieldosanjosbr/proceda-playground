@@ -44,7 +44,7 @@ Resposta esperada:
 ```json
 {
   "content": "JSON serializado no reader; TXT no writer",
-  "issues": [
+  "validation": [
     {
       "type": "MISSING_REQUIRED_FIELD",
       "registro": "313",
