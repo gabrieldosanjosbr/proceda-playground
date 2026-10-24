@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://proceda-playground.pages.dev/sitemap.xml
