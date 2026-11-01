@@ -2,6 +2,8 @@
 
 Playground interativo para explorar, ler e gerar arquivos EDI no padrão PROCEDA.
 
+**Acesse o Playground:** [proceda-playground.pages.dev](https://proceda-playground.pages.dev)
+
 O projeto é composto por uma API em Symfony e uma interface web em React.
 
 ## Funcionalidades
